@@ -1,0 +1,59 @@
+{
+  "name": "pi-enhanced-tools",
+  "version": "0.0.0-development",
+  "description": "Enhanced tools extension for PI — replacements and augmentations for built-in coding agent tools",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "coding-agent",
+    "tools",
+    "ai"
+  ],
+  "homepage": "https://github.com/karutoil/pi-enhanced-tools#readme",
+  "bugs": {
+    "url": "https://github.com/karutoil/pi-enhanced-tools/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karutoil/pi-enhanced-tools.git"
+  },
+  "license": "MIT",
+  "author": "karutoil",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "semantic-release": "semantic-release"
+  },
+  "pi": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "video": "",
+    "image": ""
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "^0.72.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "semantic-release": "^24.0.0",
+    "typebox": "^1.1.37",
+    "typescript": "^5.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
