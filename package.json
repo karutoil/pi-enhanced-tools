@@ -36,9 +36,7 @@
   "pi": {
     "extensions": [
       "./dist/index.js"
-    ],
-    "video": "",
-    "image": ""
+    ]
   },
   "peerDependencies": {
     "@mariozechner/pi-coding-agent": "*",
