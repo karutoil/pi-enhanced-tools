@@ -32,6 +32,8 @@ import { registerAskTool } from "./tools/ask.js";
 import { registerFindTool } from "./tools/find.js";
 import { registerProjectTool } from "./tools/project.js";
 import { registerBuildTool } from "./tools/build.js";
+import { registerRulesTool } from "./tools/rules.js";
+import { registerScanTool } from "./tools/scan.js";
 
 export default function enhancedToolsExtension(pi: ExtensionAPI) {
 	// ─── Register all tools ──────────────────────────────────────────
@@ -49,6 +51,8 @@ export default function enhancedToolsExtension(pi: ExtensionAPI) {
 	registerFindTool(pi);
 	registerProjectTool(pi);
 	registerBuildTool(pi);
+	registerRulesTool(pi);
+	registerScanTool(pi);
 
 	// ─── Track file changes for history ──────────────────────────────
 	let turnIndex = 0;
@@ -80,7 +84,6 @@ export default function enhancedToolsExtension(pi: ExtensionAPI) {
 
 	// ─── Notify on load ──────────────────────────────────────────────
 	pi.on("session_start", async (_event, ctx) => {
-		const tools = ["patch", "outline", "rg", "test", "validate", "build", "git", "scratch", "deps", "refactor", "history", "ask", "find", "project"];
-		ctx.ui.notify(`Enhanced tools loaded: ${tools.join(", ")}`, "info");
+		ctx.ui.notify("Enhanced tools (16) loaded", "info");
 	});
 }
