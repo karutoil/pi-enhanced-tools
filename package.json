@@ -1,6 +1,6 @@
 {
   "name": "pi-enhanced-tools",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Enhanced tools extension for PI — replacements and augmentations for built-in coding agent tools",
   "keywords": [
     "pi-package",
